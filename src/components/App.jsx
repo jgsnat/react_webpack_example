@@ -1,5 +1,6 @@
 import React from 'react';
 import Component from './Component';
+import Family from './Family';
 
 class App extends React.Component {
 
@@ -17,6 +18,7 @@ class App extends React.Component {
                 <Component
                     value="Novo Component"
                 />
+                <Family />
             </div>
         );
     }
