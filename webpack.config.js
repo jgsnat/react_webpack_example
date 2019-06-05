@@ -10,11 +10,16 @@ module.exports = {
         filename: 'bundle.js'
     },
 
+    resolve: {
+        extensions: [".js",".jsx"]
+    },
+
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader',
+                include: path.join(__dirname, 'src'),
                 exclude: /node_modules/,
                 query: {
                     presets: ['@babel/preset-env', '@babel/preset-react']
